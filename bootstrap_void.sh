@@ -67,6 +67,19 @@ configure_vim()
     #Check if vim is installed
     VIM=`vim`
     #Setup pathogen
+    printf "${INFO}Setting up pathogen${END}\n"
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+    cd ~/vim/bundle
+    #Install remaining plugins
+    printf "${INFO}Installing vim-airline${END}\n"
+    git clone https://github.com/vim-airline/vim-airline.git
+    printf "${INFO}Installing fugitive${END}\n"
+    git clone https://github.com/tpope/vim-fugitive.git
+    printf "${INFO}Installing nerdtree${END}\n"
+    git clone https://github.com/scrooloose/nerdtree.git
+    printf "${INFO}Setting up pathogen${END}\n"
 
+    printf "${PASS}Completed Installation${END}\n"
 }
