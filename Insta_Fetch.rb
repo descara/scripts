@@ -57,4 +57,3 @@ File.open("url.txt", 'w') do |file|
 		file.puts link
 	end
 end
-
