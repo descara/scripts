@@ -37,7 +37,10 @@ install_dev()
 {
     printf "${HEAD}Toolchain Installation${END}\n"
     printf "${INFO}Installing tools.${END}\n"
-    xbps-install -y gcc make git gdb vim tmux curl wget
+    xbps-install -y gcc make git gdb vim tmux curl wget base-devel
+    # Dependencies for rvm
+    xbps-install -y patch libxml2-devel libxslt-devel readline-devel libtool autoconf automake pkg-config zlib-devel libyaml-devel gdbm-devel ncurses-devel libressl-devel
+    
 
 }
 
